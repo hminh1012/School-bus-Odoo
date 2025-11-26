@@ -16,5 +16,5 @@ access_hostel_room,hostel.room,model_hostel_room,base.group_user,1,1,1,1
 access_hostel_student,hostel.student,model_hostel_student,base.group_user,1,1,1,1
 access_teacher_hr_employee,access.teacher.hr.employee,model_hr_employee,base.group_user,1,1,1,1
 access_school_fee_type_user,access.school.fee.type.user,model_school_fee_type,base.group_user,1,1,1,1
-
-
+access_schoolbus_osm_user,schoolbus.osm.user,model_schoolbus_osm,base.group_user,1,0,0,0
+access_school_geocode_wizard,school.geocode.wizard,model_school_geocode_wizard,base.group_user,1,1,1,1

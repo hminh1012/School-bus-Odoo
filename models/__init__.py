@@ -1,5 +1,6 @@
 from . import classes
 from . import parent
+from . import partner
 from . import student
 from . import student_document
 from . import subject
@@ -12,3 +13,5 @@ from . import transport
 from . import fee
 from . import hostel
 from . import fee_type
+from . import nominatim_service
+from . import osm_service
