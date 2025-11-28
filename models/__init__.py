@@ -15,3 +15,4 @@ from . import hostel
 from . import fee_type
 from . import nominatim_service
 from . import osm_service
+from . import transport_iot

@@ -5,10 +5,11 @@ _logger = logging.getLogger(__name__)
 
 class Student(models.Model):
     _name = 'school.student'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = 'Student Record'
 
-    name = fields.Char(string="Full Name", required=True)
-    admission_no = fields.Char(string="Admission No", required=True, unique=True)
+    name = fields.Char(string="Full Name", required=True, tracking=True)
+    admission_no = fields.Char(string="Admission No", required=True, unique=True, tracking=True)
     dob = fields.Date(string="Date of Birth", required=True,)
     gender = fields.Selection([
         ('male', 'Male'),
@@ -17,7 +18,7 @@ class Student(models.Model):
     ], string="Gender", required=True,)
     medical_history = fields.Text(string="Medical History")
     parent_id = fields.Many2one('school.parent', string="Parent/Guardian")
-    class_id = fields.Many2one('school.class', string="Class", required=True,)
+    class_id = fields.Many2one('school.class', string="Class", required=True, tracking=True)
     document_ids = fields.One2many('school.student.document', 'student_id', string="Documents")
     blood_group = fields.Selection([
         ('O-', 'O-'),
@@ -34,6 +35,8 @@ class Student(models.Model):
     house_address = fields.Text(string="Home Address", required=True)
     doj = fields.Date(string="Date of joining", required=True)
     trackskill = fields.Text(string="Track Skills")
+    phone = fields.Char(string="Phone")
+    email = fields.Char(string="Email")
 
     # 👇 New field for uploading and storing student image
     image_1920 = fields.Image(string="Student Photo", max_width=1920, max_height=1920, store=True)

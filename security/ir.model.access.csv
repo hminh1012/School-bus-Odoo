@@ -18,3 +18,5 @@ access_teacher_hr_employee,access.teacher.hr.employee,model_hr_employee,base.gro
 access_school_fee_type_user,access.school.fee.type.user,model_school_fee_type,base.group_user,1,1,1,1
 access_schoolbus_osm_user,schoolbus.osm.user,model_schoolbus_osm,base.group_user,1,0,0,0
 access_school_geocode_wizard,school.geocode.wizard,model_school_geocode_wizard,base.group_user,1,1,1,1
+access_school_student_card,school.student.card,model_school_student_card,base.group_user,1,1,1,1
+access_school_transport_trip_log,school.transport.trip.log,model_school_transport_trip_log,base.group_user,1,1,1,1
